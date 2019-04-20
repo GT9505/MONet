@@ -1,53 +1,31 @@
-# py-RFCN-priv
-py-RFCN-priv is based on [py-R-FCN-multiGPU](https://github.com/bharatsingh430/py-R-FCN-multiGPU), thanks for bharatsingh430's job.
+# MONet
+MONet is modified based on [py-R-FCN-priv](https://github.com/soeaver/py-RFCN-priv), thanks for soeaver's job.
 
 
 ### Disclaimer
 
 The official R-FCN code (written in MATLAB) is available [here](https://github.com/daijifeng001/R-FCN).
 
-py-R-FCN is modified from [the offcial R-FCN implementation](https://github.com/daijifeng001/R-FCN) and  [py-faster-rcnn code](https://github.com/rbgirshick/py-faster-rcnn ), and the usage is quite similar to [py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn ).
+The official R-FCN code (written in PYTHON) is available [here](https://github.com/YuwenXiong/py-R-FCN).
 
-py-R-FCN-multiGPU is a modified version of [py-R-FCN](https://github.com/Orpine/py-R-FCN), the original code is available [here](https://github.com/bharatsingh430/py-R-FCN-multiGPU).
-
-py-RFCN-priv also supports [soft-nms](https://github.com/bharatsingh430/soft-nms).
-
-caffe-priv supports [convolution_depthwise](https://github.com/BVLC/caffe/pull/5665/files), [roi warping](https://github.com/daijifeng001/caffe-mnc), [roi mask pooling](https://github.com/craftGBD/caffe-GBD), [bilinear interpolation](https://bitbucket.org/deeplab/deeplab-public/), [selu](https://github.com/HolmesShuan/SNNs-Self-Normalizing-Neural-Networks-Caffe-Reimplementation).
-
-
-### New features
-
-py-RFCN-priv supports:
- - Label shuffling (only single GPU training).
- - PIXEL_STD.
- - Anchors outside image (described in [FPN](https://arxiv.org/abs/1612.03144)).
- - [ceil_mode](https://github.com/BVLC/caffe/pull/3057/files) in pooling layer .
- - Performing bilinear interpolation operator accoording to input blobs size.
- - 2017/07/31:  support LargeMarginSoftmax and cpu forward psroipooling.
- - 2017/08/04:  add Deeplab and PSPNet support.
- - 2017/08/10:  add Deform psroipooling by [lzx1413](https://github.com/lzx1413).
- - 2017/08/18:  add ROIAlign support.
- - 2017/08/27:  add [Axpy](https://github.com/hujie-frank/SENet) layer for Senet support.
- - 2017/09/04:  add [Focal loss](https://github.com/zimenglan-sysu-512/Focal-Loss)
- 
  
 ### Installation
 
-1. Clone the py-RFCN-priv repository
+1. Clone the MONet repository
     ```Shell
-    git clone https://github.com/soeaver/py-RFCN-priv
+    git clone https://github.com/GT9505/MONet
     ```
-    We'll call the directory that you cloned py-RFCN-priv into `PRIV_ROOT`
+    We'll call the directory that you cloned MONet into `MONET_ROOT`
 
 2. Build the Cython modules
     ```Shell
-    cd $PRIV_ROOT/lib
+    cd $MONET_ROOT/lib
     make
     ```
     
 3. Build Caffe and pycaffe
     ```Shell
-    cd $RFCN_ROOT/caffe-priv
+    cd $MONET_ROOT/caffe
     # Now follow the Caffe installation instructions here:
     #   http://caffe.berkeleyvision.org/installation.html
     
@@ -67,26 +45,19 @@ py-RFCN-priv supports:
     USE_NCCL := 1
     ```
    
+### Preparation for Training & Testing
+
+Please follow the official [py-R-FCN](https://github.com/YuwenXiong/py-R-FCN) code to preparation training set and testing set
+
+### Start training
+The usage is same as [py-R-FCN-priv](https://github.com/soeaver/py-RFCN-priv)
+
+	```Shell
+	cd $MONet_ROOT
+	./experments/scripts/monet_end2end_ohem_multi_gpu.sh 0 pascal_voc
+	```
+   
   ### License
 
-py-RFCN-priv and caffe-priv are released under the MIT License (refer to the LICENSE file for details).
-
-
-### Citing 
-
-If you find R-FCN or soft-nms useful in your research, please consider citing:
-
-    @article{dai16rfcn,
-        Author = {Jifeng Dai, Yi Li, Kaiming He, Jian Sun},
-        Title = {{R-FCN}: Object Detection via Region-based Fully Convolutional Networks},
-        Journal = {arXiv preprint arXiv:1605.06409},
-        Year = {2016}
-    }
-    
-    @article{1704.04503,
-      Author = {Navaneeth Bodla and Bharat Singh and Rama Chellappa and Larry S. Davis},
-      Title = {Improving Object Detection With One Line of Code},
-      Journal = {arXiv preprint arXiv:1704.04503},
-      Year = {2017}
-    }
+MONet is released under the MIT License (refer to the LICENSE file for details).
 
