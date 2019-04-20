@@ -52,10 +52,8 @@ Please follow the official [py-R-FCN](https://github.com/YuwenXiong/py-R-FCN) co
 ### Start training
 The usage is same as [py-R-FCN-priv](https://github.com/soeaver/py-RFCN-priv)
 
-	```Shell
 	cd $MONet_ROOT
 	./experments/scripts/monet_end2end_ohem_multi_gpu.sh 0 pascal_voc
-	```
    
   ### License
 
