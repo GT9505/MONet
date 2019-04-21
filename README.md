@@ -61,7 +61,7 @@ The usage is same as [py-R-FCN-priv](https://github.com/soeaver/py-RFCN-priv)
 
 ### Results on PASCAL VOC 2007
 
-Using the default hyperparameters and iterations, you can achieve a mAP around 83.0% (no multi-scale training). [The model with 83.0% mAP](https://drive.google.com/open?id=1ucVg7o964DRZF_idDpVYuOagrIpJMmsM) 
+Using the default hyperparameters and iterations, you can achieve a mAP around 83.0% (no multi-scale training). [The model with 83.0% mAP](https://drive.google.com/open?id=1ucVg7o964DRZF_idDpVYuOagrIpJMmsM). Using multi-scale training can further improve the mAP to 83.6%.
 	
 ### License
 
