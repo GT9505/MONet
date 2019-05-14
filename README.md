@@ -68,7 +68,7 @@ Using the default hyperparameters and iterations, you can achieve a mAP around 8
 MONet is released under the MIT License (refer to the LICENSE file for details).
 
 
-### Citing 
+### Citing
 
 If you find MONet useful in your research, please consider citing:
 
