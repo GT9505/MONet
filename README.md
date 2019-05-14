@@ -67,3 +67,15 @@ Using the default hyperparameters and iterations, you can achieve a mAP around 8
 
 MONet is released under the MIT License (refer to the LICENSE file for details).
 
+
+### Citing 
+
+If you find MONet useful in your research, please consider citing:
+
+    @article{gong18monet,
+        Author = {Tao Gong, Bin Liu, Qi Chu, Nenghai Yu},
+        Title = {Using Multi-label Classification to Improve Object Detection},
+        Journal = {Submitted to Neurocomputing},
+        Year = {2018.09}
+    }
+
